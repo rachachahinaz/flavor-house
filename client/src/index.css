@@ -1,0 +1,229 @@
+@import "tailwindcss";
+
+/* ===== RTL Support ===== */
+
+/* Direction globale */
+.rtl {
+  direction: rtl;
+}
+
+/* RTL pour la navbar */
+.rtl-nav {
+  direction: rtl;
+}
+
+.rtl-nav .space-x-reverse {
+  flex-direction: row-reverse;
+}
+
+.rtl-nav .order-1 {
+  order: 1;
+}
+.rtl-nav .order-2 {
+  order: 2;
+}
+.rtl-nav .order-3 {
+  order: 3;
+}
+
+/* Texte aligné à droite */
+.rtl-text {
+  text-align: right;
+}
+
+/* Grids et flex en RTL */
+.rtl-grid {
+  direction: rtl;
+}
+
+.rtl-grid > * {
+  direction: rtl;
+}
+
+/* Marges pour RTL */
+.rtl-margin {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* Corrections pour les espaces */
+.rtl .space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+.rtl .space-x-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+.rtl .flex-row {
+  flex-direction: row-reverse;
+}
+
+.rtl .text-left {
+  text-align: right;
+}
+
+.rtl .text-right {
+  text-align: left;
+}
+
+.rtl .ml-auto {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.rtl .mr-auto {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.rtl .ml-2 {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+.rtl .mr-2 {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+.rtl .ml-3 {
+  margin-left: 0;
+  margin-right: 0.75rem;
+}
+
+.rtl .mr-3 {
+  margin-right: 0;
+  margin-left: 0.75rem;
+}
+
+.rtl .pl-4 {
+  padding-left: 0;
+  padding-right: 1rem;
+}
+
+.rtl .pr-4 {
+  padding-right: 0;
+  padding-left: 1rem;
+}
+
+.rtl .pl-10 {
+  padding-left: 0;
+  padding-right: 2.5rem;
+}
+
+.rtl .pr-10 {
+  padding-right: 0;
+  padding-left: 2.5rem;
+}
+
+/* Icônes en RTL */
+.rtl .absolute.left-3 {
+  left: auto;
+  right: 0.75rem;
+}
+
+.rtl .absolute.right-3 {
+  right: auto;
+  left: 0.75rem;
+}
+
+/* Cards et conteneurs en RTL */
+.rtl .rounded-l-xl {
+  border-radius: 0 0.75rem 0.75rem 0;
+}
+
+.rtl .rounded-r-xl {
+  border-radius: 0.75rem 0 0 0.75rem;
+}
+
+/* Border en RTL */
+.rtl .border-l-4 {
+  border-left-width: 0;
+  border-right-width: 4px;
+}
+
+.rtl .border-r-4 {
+  border-right-width: 0;
+  border-left-width: 4px;
+}
+
+/* ===== Fin RTL Support ===== */
+
+/* ===== Animations ===== */
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out;
+}
+
+/* RTL pour slide-in */
+.rtl .animate-slide-in {
+  animation: slide-in-rtl 0.3s ease-out;
+}
+
+@keyframes slide-in-rtl {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* ===== Scrollbar personnalisée ===== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c0392b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a93226;
+}
+
+/* ===== Line clamp ===== */
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ===== Global ===== */
+body {
+  margin: 0;
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+}
+
+/* RTL pour le body */
+.rtl body {
+  font-family: 'Tajawal', 'Poppins', system-ui, -apple-system, sans-serif;
+}
